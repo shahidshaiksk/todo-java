@@ -1,0 +1,13 @@
+com\epam\ui\App.class
+com\epam\dao\VaccineDaoImpl.class
+com\epam\services\UserService.class
+com\epam\exceptions\VaccineException.class
+com\epam\services\Driver.class
+com\epam\dao\UserDaoImpl.class
+com\epam\services\VaccineService.class
+com\epam\dao\UserDAO.class
+com\epam\models\Vaccine.class
+com\epam\ui\Menu.class
+com\epam\utility\Static.class
+com\epam\models\User.class
+com\epam\dao\VaccineDAO.class
