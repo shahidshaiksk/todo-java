@@ -1,1 +1,6 @@
 logs/*
+target/
+.vscode/
+resources/
+.settings
+.DS_Store
