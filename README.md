@@ -1,4 +1,4 @@
-# Vaccination
+# To-do Application
 This vaccination project is a console based application made using Spring Framework.
 
 
