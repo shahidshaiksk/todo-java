@@ -1,5 +1,5 @@
 # To-do Application
-This vaccination project is a console based application made using Spring Framework.
+This todo project is a web based API application made using SpringBoot Framework.
 
 
 To install and run this application:
