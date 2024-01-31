@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>To-Do Application</title>
+</head>
+
+<body>
+	<h2>Hello there! Welcome to <span th:text="${appName}" /> application.</h2>
+	<a href="/task/add">Add Task</a>
+	<br />
+	<h3>Incomplete Tasks</h3>
+	<table style="text-align: center;" th:style="${!incompleteTasks.isEmpty()}? 'display:block;':'display:none;'">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Complete?</th>
+				<th>Delete?</th>
+				<th>Modify?</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="task : ${incompleteTasks}">
+				<td><span th:text="${task.name}" /></td>
+				<td><span th:text="${task.description}" /></td>
+				<td><a th:href="'/task/'+${task.id}+'/complete'">Complete</a></td>
+				<td><a th:href="'/task/'+${task.id}+'/delete'">Delete</a></td>
+				<td><a th:href="'/task/'+${task.id}+'/modify'">Edit</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+	<h3>Completed Tasks</h3>
+	<table style="text-align: center;" th:style="${!completedTasks.isEmpty()}? 'display:block;':'display:none;'">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Incomplete?</th>
+				<th>Delete?</th>
+				<th>Modify?</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="task : ${completedTasks}">
+				<td><span th:text="${task.name}" /></td>
+				<td><span th:text="${task.description}" /></td>
+				<td><a th:href="'/task/'+${task.id}+'/incomplete'">Inomplete</a></td>
+				<td><a th:href="'/task/'+${task.id}+'/delete'">Delete</a></td>
+				<td><a th:href="'/task/'+${task.id}+'/modify'">Edit</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

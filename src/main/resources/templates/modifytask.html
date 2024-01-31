@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modify Task</title>
+</head>
+<body>
+	<form action="/task/modify" method="post">
+		<input type="number" id="id" name="id" th:value="${task.id}" hidden>
+		<label>Name</label>
+		<input type="text" id="name" name="name" th:value="${task.name}"><br><br>
+		<label>Description</label>
+		<input type="text" id="description" name="description" th:value="${task.description}"><br><br>
+		<label>Completed ?</label>
+		<input type="checkbox" id="completed" name="completed" th:checked="${task.completed}"><br><br>
+		<input type="submit" value="Modify">
+	</form>
+</body>
+</html>

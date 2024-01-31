@@ -1,6 +1,8 @@
 logs/*
-target/
-.vscode/
-resources/
+target/*
+.vscode/*
+resources/*
 .settings
 .DS_Store
+.project
+.classpathfetch
